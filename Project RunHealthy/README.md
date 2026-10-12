@@ -176,3 +176,17 @@ Fonts: System UI fonts for maximum compatibility
 
 📄 License
 This project is for academic purposes as part of Bournemouth University coursework. All code is original work unless otherwise attributed.
+
+Figma resources
+Final project prototype: https://www.figma.com/design/xbJ0CRY5paMz6G6paBzi3o/RunHealthy?node-id=10-340&t=fgRnSXSbeuBjtxnh-1
+Persona: https://www.figma.com/design/xbJ0CRY5paMz6G6paBzi3o/RunHealthy?node-id=123-3&t=fgRnSXSbeuBjtxnh-1
+
+
+## 📝 Assessment Feedback (MSc Programming & Prototyping, Bournemouth University)
+
+**Summary of assessor feedback:**
+
+- **Prototype quality:** Rated *"of a high standard, running reliably with clear interaction and data integration"*. Recommendations display effectively, and changing the safety thresholds updates the labels and advice **without any code changes**.
+- **Problem definition:** A clear problem space grounded in a credible scenario (an older adult with asthma preparing to go outdoors), with user pain points drawn from the persona and context analysis.
+- **Design process:** A coherent progression towards an "advice-first" layout, with reasons given for rejecting earlier design approaches.
+- **Professional considerations:** Covered sustainability, legal/ethical and professional issues, with sound awareness of risk.
