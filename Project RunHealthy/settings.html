@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="../css/variables.css">
+    
+    <!-- Alert Style -->
+    <link rel="stylesheet" href="../component/Alert/alert.css">
+    
+    <!-- Nav Style -->
+    <link rel="stylesheet" href="../component/nav/nav.css">
+
+    <!-- Dialog Style -->
+    <link rel="stylesheet" href="../component/dialog/dialog.css">
+
+    <!-- Settings Style -->
+    <link rel="stylesheet" href="css/settings.css">
+
+</head>
+<body>
+    <div id="nav_placeholder"></div>
+
+    <main class="settings_container">
+        <div class="settings_wrapper">
+            <div class="settings_img">
+                <img src="res/img/settings_bg_img.png" alt="">
+            </div>
+            <div class="content_wrapper">
+                <div class="outdoor_and_location">
+                    <h3 class="p_description">Outdoor Runner/Walker</h3>
+                    <div class="location_wrapper">
+                        <img src="res/icon/ic_location.svg" alt="">
+                        <p class="location">Bournemouth</p>
+                    </div>
+                </div>
+                <div class="thresholds_card">
+                    <div class="safety_limit_and_edit">
+                        <h4 class="Safety_limit_text">Safety Limits</h4>
+                        <ul class="edit">
+                            <li id="openDialogBtn">
+                                <img src="res/icon/ic_edit.svg" alt="">
+                                <a>Edit</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="air_quality">
+                        <p class="air_quality_text">Air Quality</p>
+                        <p class="pm_value">35ug/m^3</p>
+                    </div>
+                    <div class="temperature">
+                        <p class="temp_text">Temperature Range</p>
+                        <p class="temp_value">5 - 30^oC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- In settings.html, before closing </body> -->
+        <div class="disclaimer-footer">
+            <p class="disclaimer-text">
+                <small>
+                    ⚕️ <strong>Health Disclaimer:</strong> RUNHealthy provides environmental guidance based on Open‑Meteo data and user‑defined thresholds. 
+                    This tool is for <strong>informational purposes only</strong> and is <strong>not a substitute for professional medical advice</strong>. 
+                    Always consult your healthcare provider before making decisions about exercise with respiratory conditions.
+                </small>
+            </p>
+        </div>
+        <p class="footer_text">Copywrite Bankole Damilola Ilyas</p>
+    </footer>
+
+    <div id="dialogHolder"></div>
+    <!-- <button id="openDialogBtn">Set Safety Limit</button> -->
+
+
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/settings.js"></script>
+</body>
+</html>

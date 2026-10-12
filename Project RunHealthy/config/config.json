@@ -1,0 +1,58 @@
+{
+    "userProfile": {
+      "condition": "asthma",
+      "location": "Bournemouth",
+      "preferredActivity": "Outdoor Running / Walking"
+    },
+  
+    "thresholds": {
+      "air": {
+        "pm25": 35,
+        "unit": "ug/m³"
+      },
+      "temperature": {
+        "min": 5,
+        "max": 30,
+        "unit": "°C"
+      }
+    },
+  
+    "advice": {
+      "good": {
+        "status": "GOOD",
+        "message": "Conditions Are Suitable for Outdoor Activity",
+        "note": "Air quality and temperature are within a safe range. Breathing should remain steady and symptoms unlikely.",
+        "recommendations": [
+          "Feel free to enjoy outdoor walking or running.",
+          "Maintain hydration during activity.",
+          "Warm up and cool down properly."
+        ]
+      },
+  
+      "caution": {
+        "status": "CAUTION",
+        "message": "Conditions Are Borderline",
+        "note": "Either temperature or air quality is close to your sensitivity threshold. Activity is possible but monitor your breathing.",
+        "recommendations": [
+          "Reduce intensity if you feel chest tightness.",
+          "Carry your reliever inhaler.",
+          "Limit activity duration.",
+          "Prefer shaded or low-pollution routes."
+        ]
+      },
+  
+      "bad": {
+        "status": "NOT ADVISED",
+        "message": "Air Quality or Temperature Is Unsuitable for Outdoor Activity",
+        "note": "PM2.5 levels or temperature exceed your personal safe threshold for asthma. Outdoor exercise may worsen respiratory symptoms.",
+        "recommendations": [
+          "Use an indoor treadmill instead.",
+          "Avoid vigorous outdoor activity.",
+          "Keep your asthma inhaler nearby.",
+          "Check again later for improved conditions.",
+          "Consider wearing a mask if you must go outside briefly."
+        ]
+      }
+    }
+  }
+  

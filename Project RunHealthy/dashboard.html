@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="../css/variables.css">
+
+    <!-- Nav Style -->
+    <link rel="stylesheet" href="../component/nav/nav.css">
+
+    <!-- Alert Style -->
+    <link rel="stylesheet" href="../component/Alert/alert.css">
+
+    <!-- Gauge style -->
+    <link rel="stylesheet" href="../component/gauge/gauge.css">
+
+    <!-- Dialog Style -->
+    <link rel="stylesheet" href="../component/dialog/dialog.css">
+
+    <!-- Dashboard Style -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div id="nav_placeholder"></div>
+
+<main>
+    <div class="main_body_container">
+
+        <!-- Welcome Message -->
+        <div class="welcome">
+            <h3>Welcome Back</h3>
+        </div>
+
+        <!-- Advice Card -->
+        <div class="advise_card">
+            <h2 class="advise">The Advise</h2>
+            <p class="advise_note">The advise note</p>
+        </div>
+
+        <!-- CHARTS + RECOMMENDATION WRAPPER -->
+        <div class="charts_and_recommendation">
+
+            <!-- LEFT SIDE: Atmospheric Overview -->
+            <div class="charts">
+
+                <div class="chart_header_text">
+                    <img src="res/icon/ic_atmospheric.svg" alt="">
+                    <p class="chart_note">Atmospheric Overview In <span>Bournemouth</span></p>
+                </div>
+
+                <!-- GAUGES WRAPPER (side-by-side) -->
+                <div class="gauges_row">
+
+                    <!-- PM Gauge Card -->
+                    <div class="pm_gauge_card">
+                        <div class="pm-gauge"></div>
+
+                        <div class="pm_gauge_wrapper">
+                            <img src="res/icon/ic_air_quality.svg" alt="">
+                            <div class="pm_gauge_text_wrapper">
+                                <p class="pm_placeholder">Air Quality</p>
+                                <p class="pm_value">46ug/m^3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Temperature Gauge Card -->
+                    <div class="temp_gauge_card">
+                        <div id="temperature_gauge"></div>
+
+                        <div class="temp_gauge_wrapper">
+                            <img src="res/icon/ic_hot_temperature.svg" alt="">
+                            <div class="temp_gauge_text_wrapper">
+                                <p class="temp_placeholder_text">Temperature</p>
+                                <p class="temp_value">7°C</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end .gauges_row -->
+
+            </div><!-- end .charts -->
+
+            <!-- RIGHT SIDE: Recommendation -->
+            <div class="recommendation">
+
+                <div class="recommendation_header_text">
+                    <img src="res/icon/ic_reommendation.svg" alt="">
+                    <p class="recommendation_note">Recommendation</p>
+                </div>
+
+                <div class="recommended_advise_card">
+                    <ul class="recommended_advise"></ul>
+                </div>
+            </div>
+
+        </div><!-- end charts_and_recommendation -->
+
+        <!-- Safety Limit Card -->
+        <div class="safety_limit_card">
+            <h4 class="safety_placeholder_text">Your Safety Limits Are:</h4>
+
+            <div class="pm_and_temp_wrapper">
+                <div class="pm_safety_wrapper">
+                    <img src="res/icon/ic_pm25.svg" alt="">
+                    <p class="pm_text">Air <span>45ug/m^3</span></p>
+                </div>
+    
+                <div class="temp_safety_wrapper">
+                    <img src="res/icon/ic_temp.svg" alt="">
+                    <p class="temp_value_range">Temperature <span>10 – 32°C</span></p>
+                </div>
+            </div>
+
+            <a id="openDialogBtn">Adjust Settings</a>
+        </div>
+
+    </div>
+</main>
+
+<footer class="data_time_generation">
+    <p class="time_stamp">Lastly generated <span>30th December 2025 at 16:10</span></p>
+</footer>
+
+<div id="dialogHolder"></div>
+
+<script type="module" src="js/script.js"></script>
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>

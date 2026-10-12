@@ -1,0 +1,26 @@
+
+<dialog id="myDialog">
+    <h2 class="dialog_title">Set Safety Limit</h2>
+
+    <div class="dialog_section">
+        <p class="section_label">Temperature Range (°C)</p>
+        <div class="input_row">
+            <input type="number" id="temp_min" placeholder="5">
+            <span class="range_dash">—</span>
+            <input type="number" id="temp_max" placeholder="35">
+        </div>
+    </div>
+
+    <div class="dialog_section">
+        <p class="section_label">Air Quality Threshold (PM2.5)</p>
+        <input type="number" id="air_quality" placeholder="35">
+    </div>
+
+    <div class="dialog_section">
+        <p class="section_label">Location</p>
+        <input type="text" id="location" placeholder="Lagos">
+    </div>
+
+    <button id="dialog_done_btn">Done</button>
+</dialog>
+ 

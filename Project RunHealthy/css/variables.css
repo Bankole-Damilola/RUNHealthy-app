@@ -1,0 +1,26 @@
+:root {
+    /* App wide colours */
+    --app_green: #21A65A;
+    --app_red: #D32F2F;
+    --app_amber: #FFC107;
+    --app_dark_green: #2E7D32;
+    --app_blue: #1E90FF;
+    --app_black: #1e1e1e;
+    --app_white: #FFFFFF;
+
+    /* App wide standard measurement */
+    --radius: 12px;
+    --arc_radius: 50%;
+
+    /* Icon width and height */
+    --icon_unit: 23px;
+
+    /* Box shadow color */
+    --box_shadow: rgba(0,0,0,0.07);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

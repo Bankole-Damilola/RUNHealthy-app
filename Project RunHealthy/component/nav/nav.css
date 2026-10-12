@@ -1,0 +1,203 @@
+/* Container of entire nav */
+.nav_container {
+    background: var(--app_white);
+    /* padding: 12px 22px; */
+    border-bottom: 1px solid #ececec;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: system-ui, sans-serif;
+}
+
+.nav_container_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    width: 90%;
+    max-width: 1100px;
+}
+
+/* App logo + title */
+.logo_container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* .logo_container img {
+    width: 60px;
+    height: 60px;
+} */
+
+.logo_container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--app_black);
+}
+
+.logo_container h2 span {
+    color: var(--app_green);    /* Your brand accent */
+}
+
+/* Navigation list */
+.nav_destination {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Each nav item */
+.nav_destination li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Icons */
+.nav_destination li img {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0.3); /* Light grey default */
+    transition: 0.3s ease;
+}
+
+/* Links */
+.nav_destination li a {
+    text-decoration: none;
+    color: var(--app_black);
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    /* border-bottom: 2px solid var(--app_green); */
+}
+
+/* Hover */
+.nav_destination li:hover a {
+    color: var(--app_green);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--app_green);
+}
+
+.nav_destination li:hover img {
+    filter: brightness(1);
+}
+
+/* Active (current page highlight) */
+.nav_destination li a.active {
+    color: var(--app_black);
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--app_green);
+}
+
+.nav_destination li.active img {
+    filter: brightness(1);
+}
+
+/* Underline indicator for the active page */
+.nav_destination li.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--app_green);
+    border-radius: 3px;
+}
+
+/* Responsiveness */
+
+/* ============================================
+   RESPONSIVE NAVIGATION
+   ============================================ */
+
+/* Tablet breakpoint */
+@media (max-width: 850px) {
+    .nav_container_wrapper {
+        width: 94%;
+        max-width: none;
+    }
+
+    .logo_container h2 {
+        font-size: 1.7rem;
+    }
+
+    .nav_destination li a {
+        font-size: 18px;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+    .nav_container_wrapper {
+        width: 92%;
+    }
+
+    /* Reduce gap between nav items */
+    .nav_destination {
+        gap: 18px;
+    }
+
+    /* Shrink icons */
+    .nav_destination li img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Shrink text slightly */
+    .nav_destination li a {
+        font-size: 16px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 450px) {
+    .nav_container_wrapper {
+        width: 90%;
+    }
+
+    /* Further reduce spacing */
+    .nav_destination {
+        gap: 14px;
+    }
+
+    .nav_destination li img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nav_destination li a {
+        font-size: 15px;
+    }
+
+    /* Logo text smaller */
+    .logo_container h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 360px) {
+    .nav_destination {
+        gap: 10px;
+    }
+
+    .nav_destination li a {
+        font-size: 14px;
+    }
+
+    .logo_container h2 {
+        font-size: 1.25rem;
+    }
+}
+

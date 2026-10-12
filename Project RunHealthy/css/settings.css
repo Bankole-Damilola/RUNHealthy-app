@@ -1,0 +1,191 @@
+/* ============================================
+   MAIN SETTINGS LAYOUT
+   ============================================ */
+.settings_container {
+    display: flex;
+    justify-content: center;
+    font-family: system-ui, sans-serif;
+}
+
+.settings_wrapper {
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* ============================================
+   HERO IMAGE
+   ============================================ */
+.settings_img img {
+    width: 100%;
+    height: 320px;
+    object-fit: fill;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ============================================
+   CONTENT ROW: OUTDOOR + SAFETY CARD
+   ============================================ */
+.content_wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ============================================
+   OUTDOOR DESCRIPTION & LOCATION
+   ============================================ */
+.p_description {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--app_black);
+}
+
+.location_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.location_wrapper img {
+    width: 18px;
+    height: 18px;
+}
+
+.location {
+    font-size: 1.2rem;
+    color: var(--app_black);
+    margin: 0;
+}
+
+/* ============================================
+   SAFETY LIMITS CARD
+   ============================================ */
+.thresholds_card {
+    background: var(--app_white);
+    padding: 22px 25px;
+    border-radius: var(--radius);
+    width: 320px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Header Row */
+.safety_limit_and_edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.Safety_limit_text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Edit button */
+.edit {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.edit li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.edit li img {
+    width: 18px;
+    height: 18px;
+}
+
+.edit li a {
+    text-decoration: none;
+    color: var(--app_green);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   AIR QUALITY & TEMPERATURE
+   ============================================ */
+.air_quality,
+.temperature {
+    margin-bottom: 18px;
+}
+
+.air_quality_text,
+.temp_text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+}
+
+.pm_value,
+.temp_value {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+    color: #000;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.footer_text {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.disclaimer-footer {
+    margin-top: 40px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.disclaimer-text strong {
+    color: #d32f2f; /* Your app_red color */
+}
+
+/* ============================================
+   RESPONSIVE: TABLET & MOBILE
+   ============================================ */
+@media (max-width: 850px) {
+    .content_wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .thresholds_card {
+        width: 100%;
+        max-width: 360px;
+        justify-self: center;
+    }
+
+    .p_description {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .location_wrapper {
+        justify-content: center;
+    }
+}

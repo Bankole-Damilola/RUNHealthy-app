@@ -1,0 +1,337 @@
+/* ============================================================
+   GLOBAL PAGE LAYOUT
+   ============================================================ */
+   main {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.main_body_container {
+    width: 90%;
+    max-width: 1100px;
+    margin-top: 10px;
+    font-family: system-ui, sans-serif;
+}
+
+/* ============================================================
+   WELCOME TITLE
+   ============================================================ */
+.welcome {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.welcome h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+}
+
+/* ============================================================
+   ADVICE CARD
+   ============================================================ */
+.advise_card {
+    background: var(--app_white);
+    border: 2.5px solid transparent;
+    padding: 45px 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 10px var(--box_shadow);
+    margin-bottom: 40px;
+    text-align: center;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.advise {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--app_red);
+    margin: 0;
+}
+
+.advise_note {
+    font-size: 1.75rem;
+    color: #000;
+}
+
+.advise_card.good {
+    border-color: var(--app_green);
+}
+
+.advise_card.caution {
+    border-color: var(--app_amber);
+}
+
+.advise_card.bad {
+    border-color: var(--app_red);
+}
+
+.advise_card.good .advise {
+    color: var(--app_green);
+}
+
+.advise_card.caution .advise {
+    color: var(--app_amber);
+}
+
+.advise_card.bad .advise {
+    color: var(--app_red);
+}
+
+/* ============================================================
+   CHARTS + RECOMMENDATION GRID
+   ============================================================ */
+.charts_and_recommendation {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* ============================================================
+   CHART HEADER TEXT
+   ============================================================ */
+.chart_header_text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.chart_header_text img {
+    width: 28px;
+    height: 28px;
+}
+
+.chart_note {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ============================================================
+   GAUGES ROW (PM + TEMP side-by-side)
+   ============================================================ */
+.gauges_row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   GAUGE CARDS
+   ============================================================ */
+.pm_gauge_card,
+.temp_gauge_card {
+    background: var(--app_white);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px var(--box_shadow);
+    width: 240px;
+}
+
+/* PM & TEMP ICON / TEXT WRAPPERS */
+.pm_gauge_wrapper,
+.temp_gauge_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.pm_gauge_wrapper img,
+.temp_gauge_wrapper img {
+    width: 26px;
+    height: 26px;
+}
+
+.pm_gauge_text_wrapper,
+.temp_gauge_text_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABELS */
+.pm_placeholder,
+.temp_placeholder_text {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.pm_value,
+.temp_value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* ============================================================
+   RECOMMENDATION SECTION
+   ============================================================ */
+.recommendation {
+    padding-top: 10px;
+}
+
+.recommendation_header_text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.recommendation_header_text img {
+    width: 26px;
+    height: 26px;
+}
+
+.recommendation_note {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* RECOMMENDED ADVICE CARD */
+.recommended_advise_card {
+    background: var(--app_white);
+    padding: 18px;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 10px var(--box_shadow);
+}
+
+.recommended_advise {
+    padding-left: 20px;
+    line-height: 1.8rem;
+}
+
+/* ============================================================
+   SAFETY LIMIT CARD
+   ============================================================ */
+.safety_limit_card {
+    background: var(--app_white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 10px var(--box_shadow);
+    display: flex;
+    /* align-items: center; */
+    gap: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+
+/* Label */
+.safety_placeholder_text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+/* PM AND TEMP SAFETY WRAPPERS */
+.pm_and_temp_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* AIR SAFETY WRAPPER */
+.pm_safety_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pm_safety_wrapper img {
+    width: 24px;
+    height: 24px;
+}
+
+.pm_text {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.pm_text span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* TEMP SAFETY WRAPPER */
+.temp_safety_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.temp_safety_wrapper img {
+    width: 24px;
+    height: 24px;
+}
+
+.temp_value_range {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.temp_value_range span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Adjust Settings link */
+a {
+    text-decoration: none;
+    color: var(--app_blue);
+    font-weight: 500;
+    font-size: 1.12rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--app_green);
+}
+
+/* ============================================================
+   FOOTER TIMESTAMP
+   ============================================================ */
+.data_time_generation {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.data_time_generation .time_stamp {
+    font-size: 1.25rem;
+    color: #444;
+}
+
+.data_time_generation span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ============================================================
+   RESPONSIVENESS
+   ============================================================ */
+@media (max-width: 900px) {
+    .charts_and_recommendation {
+        grid-template-columns: 1fr;
+    }
+
+    .gauges_row {
+        justify-content: center;
+    }
+
+    .pm_gauge_card,
+    .temp_gauge_card {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .adjust_limits {
+        margin-left: 0;
+        width: 100%;
+        text-align: right;
+    }
+}
